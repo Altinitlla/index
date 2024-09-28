@@ -11,7 +11,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: Arial, sans-serif;
-            overflow: hidden; /* Prevents scrollbars from showing */
         }
 
         /* Navigation Bar */
@@ -52,46 +51,48 @@
 
         #content {
             text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: white; /* Change text color for better visibility */
+            margin-top: 100px; /* Push content below the nav bar */
         }
 
-        #heart {
-            color: red;
-            font-size: 80px;
-            animation: pulse 1.5s infinite; /* Adds a pulsing effect */
-        }
-
-        /* Correct Heart Shape */
+        /* Heart Shape Container */
         #photo-container {
             position: relative;
-            width: 400px;
-            height: 360px;
-            background-image: url('vt0112.jpg'); /* Replace with your image */
-            background-size: cover;
-            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 80%, 15% 100%, 0% 35%);
+            width: 300px;
+            height: 300px;
             margin: 50px auto;
-            animation: swing 3s infinite; /* Adds a swinging effect */
+            background: red;
+            transform: rotate(-45deg); /* Rotates the container to form a heart */
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+        #photo-container::before, #photo-container::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: red;
+            border-radius: 50%;
         }
 
-        @keyframes swing {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(-5deg); }
-            100% { transform: rotate(0deg); }
+        #photo-container::before {
+            top: -150px;
+            left: 0;
         }
 
+        #photo-container::after {
+            top: 0;
+            left: -150px;
+        }
+
+        /* Heart image */
+        #photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(45deg); /* Rotates the image back to fit the heart */
+        }
+
+        /* Moving Hearts */
         .moving-heart {
             position: absolute;
             font-size: 30px;
@@ -106,13 +107,12 @@
         }
 
         h1 {
-            color: blue; /* Change text color */
-            font-size: 48px; /* Increased font size */
-            text-align: center; /* Center align the text */
-            margin-top: 20px; /* Space above the heading */
-            position: relative;
-            top: 40px; /* Adjust the position based on the photo container size */
+            color: blue;
+            font-size: 48px;
+            margin-top: 20px;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -128,12 +128,13 @@
     </nav>
 
     <div id="content">
-        <div id="heart">
-            &#10084; VALERIA &#10084;
-        </div>
+        <!-- Heart-shaped image container -->
         <div id="photo-container">
-            <!-- The heart-shaped container -->
+            <img id="photo" src="vt0112.jpg" alt="Valeria's Photo"> <!-- Replace with your image URL -->
         </div>
+
+        <!-- H1 is now visible below the heart -->
+        <h1>АЛБАНЕЦ Let's Fight</h1>
     </div>
 
     <!-- Adding moving hearts -->
@@ -142,9 +143,6 @@
     <div class="moving-heart" style="top: 30%; left: 80%;">&#10084;</div>
     <div class="moving-heart" style="top: 50%; left: 30%;">&#10084;</div>
     <div class="moving-heart" style="top: 60%; left: 70%;">&#10084;</div>
-
-    <!-- H1 placed below the photo -->
-    <h1>АЛБАНЕЦ Let's Fight</h1>
 
     <script>
         // Randomize the position and animation delay of moving hearts
@@ -157,5 +155,8 @@
             heart.style.animationDelay = `${Math.random() * 3}s`; // Random delay for different starting times
         });
     </script>
+
 </body>
 </html>
+
+    
