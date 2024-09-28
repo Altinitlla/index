@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #00546B, #000000);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: black;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Keeps the nav bar on top of everything */
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between navigation items */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Highlight color on hover */
+        }
+
+        #content {
+            text-align: center;
+            padding-top: 150px; /* Adjusts space for the fixed nav bar */
+            color: white;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 48px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Footer for scrolling */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Moving hearts */
+        .moving-heart {
+            position: absolute;
+            font-size: 30px;
+            color: red;
+            animation: float 4s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="erotic_stuff.html">Erotic Stuff</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div id="content">
+        <h1>About Us</h1>
+        <p>This is the About Us section where you can add information about yourself or your project.</p>
+    </div>
+
+    <!-- Moving hearts -->
+    <div class="moving-heart" style="top: 10%; left: 10%;">&#10084;</div>
+    <div class="moving-heart" style="top: 20%; left: 50%;">&#10084;</div>
+    <div class="moving-heart" style="top: 30%; left: 80%;">&#10084;</div>
+    <div class="moving-heart" style="top: 50%; left: 30%;">&#10084;</div>
+    <div class="moving-heart" style="top: 60%; left: 70%;">&#10084;</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Valeria's Surprise © 2024</p>
+    </footer>
+
+    <script>
+        // Randomize the position and animation delay of moving hearts
+        const hearts = document.querySelectorAll('.moving-heart');
+        hearts.forEach(heart => {
+            const randomLeft = Math.random() * 100; // Random left position
+            heart.style.left = `${randomLeft}%`;
+            const randomDuration = Math.random() * 3 + 3; // Random duration between 3s and 6s
+            heart.style.animationDuration = `${randomDuration}s`;
+            heart.style.animationDelay = `${Math.random() * 3}s`; // Random delay for different starting times
+        });
+    </script>
+</body>
+</html>
