@@ -9,7 +9,8 @@
         body {
             background-color: #b22222; /* Dark red background */
             font-family: 'Baskerville', serif;
-            overflow: hidden; /* Prevent scrollbars */
+            overflow: auto; /* Allow scrolling */
+            position: relative; /* Position for background hearts */
         }
 
         #content {
@@ -17,22 +18,22 @@
             padding: 20px;
         }
 
-       .photo-frame {
-    width: 350px; /* Frame width */
-    height: 350px; /* Frame height */
-    border: 8px solid white; /* Initial border color */
-    display: inline-block; /* Align photos in a row */
-    margin: 10px; /* Space between frames */
-    position: relative; /* Position for absolute positioning of hearts */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
-}
+        .photo-frame {
+            width: 350px; /* Frame width */
+            height: 350px; /* Frame height */
+            border: 8px solid white; /* Initial border color */
+            display: inline-block; /* Align photos in a row */
+            margin: 20px; /* Space between frames */
+            position: relative; /* Position for absolute positioning of hearts */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
+        }
 
-.photo-frame:hover {
-    border-color: #ff69b4; /* Change border color on hover */
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.8); /* Glow effect */
-    border-style: dashed;
-    transform: scale(1.1); /* Slightly grow the border */
-}
+        .photo-frame:hover {
+            border-color: #ff69b4; /* Change border color on hover */
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8); /* Glow effect */
+            border-style: dashed;
+            transform: scale(1.05); /* Slightly grow the border */
+        }
 
         img {
             width: 100%;
@@ -42,14 +43,14 @@
 
         .small-heart {
             position: absolute;
-            font-size: 20px; /* Size of small heart */
+            font-size: 40px; /* Size of small heart */
             color: white;
             animation: float 4s infinite; /* Floating animation */
         }
 
-         .small-heart1 {
+        .small-heart1 {
             position: absolute;
-            font-size: 50px; /* Size of small heart */
+            font-size: 60px; /* Size of big heart */
             color: white;
             animation: float 4s infinite; /* Floating animation */
         }
@@ -58,6 +59,14 @@
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0); }
+        }
+
+        /* Background Hearts */
+        .background-heart {
+            position: absolute;
+            font-size: 80px; /* Size of background hearts */
+            color: rgba(255, 255, 255, 0.2); /* Light color for the background hearts */
+            animation: float 4s infinite; /* Floating animation */
         }
 
         /* Navigation Bar Styles */
@@ -89,13 +98,19 @@
             color: white; /* Text color */
             text-align: center; /* Center align text */
             padding: 10px; /* Space inside the footer */
-            position: absolute; /* Positioning at the bottom */
-            bottom: 0;
+            position: relative; /* Keep footer at the bottom */
             width: 100%; /* Full width */
         }
     </style>
 </head>
 <body>
+    <!-- Background Hearts -->
+    <span class="background-heart" style="top: 10%; left: 10%;">&#10084;</span>
+    <span class="background-heart" style="top: 20%; left: 30%;">&#10084;</span>
+    <span class="background-heart" style="top: 40%; left: 70%;">&#10084;</span>
+    <span class="background-heart" style="top: 60%; right: 20%;">&#10084;</span>
+    <span class="background-heart" style="top: 80%; left: 50%;">&#10084;</span>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -107,20 +122,15 @@
 
     <div id="content">
         <h1 style="color: white;">Photos</h1>
-         <span class="small-heart" style="top: 70%; left: 30%;">&#10084;</span>
-         <span class="small-heart" style="top: 90%; right: 60%;">&#10084;</span>
-         <span class="small-heart" style="top: 50%; left: 80%;">&#10084;</span>
-        <div class="photo-frame">
-            
-            <img src="v1.jpg" alt="Photo 1"> <!-- Replace with your image URLs -->
+        <div class="photo-frame" style="transform: rotate(15deg);"> <!-- Rotated frame -->
+            <img src="v1.jpg" alt="Photo 1">
             <span class="small-heart" style="top: 10%; left: 10%;">&#10084;</span>
         </div>
         <div class="photo-frame">
-             <span class="small-heart" style="top: 10%; left: 30%;">&#10084;</span>
             <img src="v2.jpg" alt="Photo 2">
             <span class="small-heart" style="top: 10%; left: 30%;">&#10084;</span>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" style="transform: rotate(25deg);"> <!-- Rotated frame -->
             <img src="v5.jpg" alt="Photo 3">
             <span class="small-heart" style="top: 10%; left: 50%;">&#10084;</span>
         </div>
@@ -128,7 +138,7 @@
             <img src="v4.jpg" alt="Photo 4">
             <span class="small-heart" style="top: 10%; left: 70%;">&#10084;</span>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" style="transform: rotate(45deg);"> <!-- Rotated frame -->
             <img src="v3.jpg" alt="Photo 5">
             <span class="small-heart" style="top: 10%; left: 90%;">&#10084;</span>
         </div>
@@ -140,19 +150,14 @@
             <img src="v7.jpg" alt="Photo 7">
             <span class="small-heart" style="top: 30%; left: 30%;">&#10084;</span>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" style="transform: rotate(25deg);"> <!-- Rotated frame -->
             <img src="v8.jpg" alt="Photo 8">
             <span class="small-heart" style="top: 30%; left: 50%;">&#10084;</span>
         </div>
-        <div class="photo-frame">
+        <div class="photo-frame" style="transform: rotate(25deg);">
             <img src="v9.jpg" alt="Photo 9">
             <span class="small-heart" style="top: 30%; left: 70%;">&#10084;</span>
         </div>
-         <span class="small-heart1" style="top: 30%; left: 30%;">&#10084;</span>
-         <span class="small-heart1" style="top: 30%; left: 70%;">&#10084;</span>
-         <span class="small-heart1" style="top: 30%; right: 30%;">&#10084;</span>
-         <span class="small-heart1" style="top: 30%; tight: 70%;">&#10084;</span>
-        
     </div>
 
     <footer>
@@ -160,4 +165,5 @@
     </footer>
 </body>
 </html>
+
 
