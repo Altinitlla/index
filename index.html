@@ -33,7 +33,7 @@
             position: relative;
             width: 350px; /* Width of the heart-shaped container */
             height: 350px; /* Height of the heart-shaped container */
-            clip-path: polygon(60% 0%, 50% 100%, 105% 100%); /* Creates a heart shape */
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Creates a heart shape */
             overflow: hidden;
             margin: 50px auto; /* Centers the container */
             animation: swing 3s infinite; /* Adds a swinging effect */
@@ -77,13 +77,18 @@
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
         }
+
         h1 {
-    color: blue; /* Change text color */
-    font-size: 36px; /* Change font size */
-    text-align: center; /* Center align the text */
-    margin: 20px 0; /* Adjust margin */
-    peding: 600px;
-}
+            color: blue; /* Change text color */
+            font-size: 48px; /* Increased font size */
+            text-align: center; /* Center align the text */
+            margin-top: 20px; /* Space above the heading */
+            margin-bottom: 0; /* Remove space below */
+            position: absolute; /* Absolute position to place it below the photo */
+            top: calc(50% + 200px); /* Adjust based on the photo container size */
+            left: 50%;
+            transform: translateX(-50%); /* Center it */
+        }
 
     </style>
 </head>
@@ -91,15 +96,11 @@
     <div id="content">
         <div id="heart">
             &#10084; VALERIA &#10084;
-        
-            
         </div>
         <div id="photo-container">
             <img id="photo" src="vt0112.jpg" alt="Valeria's Photo"> <!-- Replace with your image URL -->
         </div>
     </div>
-    <br><br>
-  <h1>АЛБАНЕЦ Lets fight</h1>
 
     <!-- Adding moving hearts -->
     <div class="moving-heart" style="top: 10%; left: 10%;">&#10084;</div>
@@ -107,6 +108,8 @@
     <div class="moving-heart" style="top: 30%; left: 80%;">&#10084;</div>
     <div class="moving-heart" style="top: 50%; left: 30%;">&#10084;</div>
     <div class="moving-heart" style="top: 60%; left: 70%;">&#10084;</div>
+
+    <h1>АЛБАНЕЦ Let's Fight</h1>
 
     <script>
         // Randomize the position and animation delay of moving hearts
@@ -121,3 +124,4 @@
     </script>
 </body>
 </html>
+
