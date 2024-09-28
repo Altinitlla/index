@@ -21,9 +21,9 @@
         .photo-frame {
             width: 350px; /* Frame width */
             height: 350px; /* Frame height */
-            border: 8px solid white; /* Initial border color */
+            border: 12px solid white; /* Initial border color */
             display: inline-block; /* Align photos in a row */
-            margin: 20px; /* Space between frames */
+            margin: 40px; /* Space between frames */
             position: relative; /* Position for absolute positioning of hearts */
             transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color and shadow */
         }
@@ -86,10 +86,13 @@
             margin: 0 20px; /* Space between links */
         }
 
-        nav ul li a {
-            color: white; /* Text color */
-            text-decoration: none; /* Remove underline */
-            font-size: 18px; /* Font size for links */
+      nav ul li a {
+            text-decoration: none;
+            font-family: 'Libre Baskerville', serif;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
         
         nav ul li a:hover {
@@ -142,7 +145,7 @@
             <img src="v4.jpg" alt="Photo 4">
             <span class="small-heart" style="top: 10%; left: 70%;">&#10084;</span>
         </div>
-        <div class="photo-frame" style="transform: rotate(45deg);"> <!-- Rotated frame -->
+        <div class="photo-frame" style="transform: rotate(35deg);"> <!-- Rotated frame -->
             <img src="v3.jpg" alt="Photo 5">
             <span class="small-heart" style="top: 10%; left: 90%;">&#10084;</span>
         </div>
@@ -154,7 +157,7 @@
             <img src="v7.jpg" alt="Photo 7">
             <span class="small-heart" style="top: 30%; left: 30%;">&#10084;</span>
         </div>
-        <div class="photo-frame" style="transform: rotate(25deg);"> <!-- Rotated frame -->
+        <div class="photo-frame" style="transform: rotate(15deg);"> <!-- Rotated frame -->
             <img src="v8.jpg" alt="Photo 8">
             <span class="small-heart" style="top: 30%; left: 50%;">&#10084;</span>
         </div>
