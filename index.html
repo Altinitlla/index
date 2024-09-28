@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <title>Valeria's Surprise</title>
     <style>
         body {
-            background: linear-gradient(135deg, #005BBB, #FFD700);
+            background: linear-gradient(135deg, #00546B, #000000); /* Updated gradient colors */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -102,9 +101,10 @@
         const hearts = document.querySelectorAll('.moving-heart');
         hearts.forEach(heart => {
             const randomLeft = Math.random() * 100; // Random left position
-            const randomDuration = Math.random() * 5 + 3; // Random duration between 3s and 8s
             heart.style.left = `${randomLeft}%`;
+            const randomDuration = Math.random() * 3 + 3; // Random duration between 3s and 6s
             heart.style.animationDuration = `${randomDuration}s`;
+            heart.style.animationDelay = `${Math.random() * 3}s`; // Random delay for different starting times
         });
     </script>
 </body>
