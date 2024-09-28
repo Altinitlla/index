@@ -31,9 +31,9 @@
 
         #photo-container {
             position: relative;
-            width: 300px; /* Width of the heart-shaped container */
-            height: 300px; /* Height of the heart-shaped container */
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Creates a heart shape */
+            width: 350px; /* Width of the heart-shaped container */
+            height: 350px; /* Height of the heart-shaped container */
+            clip-path: polygon(40% 0%, 20% 90%, 80% 100%); /* Creates a heart shape */
             overflow: hidden;
             margin: 50px auto; /* Centers the container */
             animation: swing 3s infinite; /* Adds a swinging effect */
@@ -77,17 +77,27 @@
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
         }
+        h1 {
+    color: blue; /* Change text color */
+    font-size: 36px; /* Change font size */
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Adjust margin */
+}
+
     </style>
 </head>
 <body>
     <div id="content">
         <div id="heart">
             &#10084; VALERIA &#10084;
+        
+            
         </div>
         <div id="photo-container">
             <img id="photo" src="vt0112.jpg" alt="Valeria's Photo"> <!-- Replace with your image URL -->
         </div>
     </div>
+  <h1>АЛБАНЕЦ Lets fight</h1>
 
     <!-- Adding moving hearts -->
     <div class="moving-heart" style="top: 10%; left: 10%;">&#10084;</div>
