@@ -58,11 +58,12 @@
         /* Heart Shape Container */
         #photo-container {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 300px; /* Make the container proportional to the image */
+            height: 270px; /* Adjusted height for better aspect ratio */
             margin: 50px auto;
             background: red;
             transform: rotate(-45deg); /* Rotates the container to form a heart */
+            overflow: hidden; /* Ensures that the image stays within the heart shape */
         }
 
         #photo-container::before, #photo-container::after {
@@ -88,7 +89,7 @@
         #photo {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ensures the image fits proportionally */
             transform: rotate(45deg); /* Rotates the image back to fit the heart */
         }
 
