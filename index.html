@@ -31,9 +31,9 @@
 
         #photo-container {
             position: relative;
-            width: 450px; /* Adjusted width of the heart-shaped container */
-            height: 450px; /* Adjusted height of the heart-shaped container */
-            clip-path: path('M 504 66 Q 336 0, 126 151 Q 0 302, 504 756 Q 1008 302, 878 151 Q 672 0, 504 66 Z');
+            width: 750px; /* Adjusted width of the heart-shaped container */
+            height: 750px; /* Adjusted height of the heart-shaped container */
+            clip-path: path('M 375 0 Q 500 0, 500 200 Q 500 400, 375 600 Q 250 400, 250 200 Q 250 0, 375 0 Z'); /* Creates a heart shape */
             overflow: hidden;
             margin: 50px auto; /* Centers the container */
             animation: swing 3s infinite; /* Adds a swinging effect */
@@ -85,7 +85,7 @@
             margin-top: 20px; /* Space above the heading */
             margin-bottom: 0; /* Remove space below */
             position: absolute; /* Absolute position to place it below the photo */
-            top: calc(50% + 350px); /* Adjust based on the photo container size */
+            top: calc(50% + 380px); /* Adjust based on the photo container size */
             left: 50%;
             transform: translateX(-50%); /* Center it */
         }
@@ -123,4 +123,3 @@
     </script>
 </body>
 </html>
-
