@@ -33,7 +33,7 @@
             position: relative;
             width: 350px; /* Width of the heart-shaped container */
             height: 350px; /* Height of the heart-shaped container */
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Creates a heart shape */
+            clip-path: path('M 50 0 Q 100 0, 100 50 Q 100 100, 50 150 Q 0 100, 0 50 Q 0 0, 50 0 Z'); /* Creates a heart shape */
             overflow: hidden;
             margin: 50px auto; /* Centers the container */
             animation: swing 3s infinite; /* Adds a swinging effect */
@@ -83,7 +83,7 @@
             font-size: 48px; /* Increased font size */
             text-align: center; /* Center align the text */
             margin-top: 50px; /* Space above the heading */
-            margin-bottom: 70px; /* Remove space below */
+            margin-bottom: 50px; /* Remove space below */
             position: absolute; /* Absolute position to place it below the photo */
             top: calc(50% + 200px); /* Adjust based on the photo container size */
             left: 50%;
@@ -124,4 +124,3 @@
     </script>
 </body>
 </html>
-
