@@ -47,6 +47,13 @@
             animation: float 4s infinite; /* Floating animation */
         }
 
+         .small-heart1 {
+            position: absolute;
+            font-size: 50px; /* Size of small heart */
+            color: white;
+            animation: float 4s infinite; /* Floating animation */
+        }
+
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -100,11 +107,16 @@
 
     <div id="content">
         <h1 style="color: white;">Photos</h1>
+         <span class="small-heart" style="top: 70%; left: 30%;">&#10084;</span>
+         <span class="small-heart" style="top: 90%; right: 60%;">&#10084;</span>
+         <span class="small-heart" style="top: 50%; left: 80%;">&#10084;</span>
         <div class="photo-frame">
+            
             <img src="v1.jpg" alt="Photo 1"> <!-- Replace with your image URLs -->
             <span class="small-heart" style="top: 10%; left: 10%;">&#10084;</span>
         </div>
         <div class="photo-frame">
+             <span class="small-heart" style="top: 10%; left: 30%;">&#10084;</span>
             <img src="v2.jpg" alt="Photo 2">
             <span class="small-heart" style="top: 10%; left: 30%;">&#10084;</span>
         </div>
@@ -136,6 +148,11 @@
             <img src="v9.jpg" alt="Photo 9">
             <span class="small-heart" style="top: 30%; left: 70%;">&#10084;</span>
         </div>
+         <span class="small-heart1" style="top: 30%; left: 30%;">&#10084;</span>
+         <span class="small-heart1" style="top: 30%; left: 70%;">&#10084;</span>
+         <span class="small-heart1" style="top: 30%; right: 30%;">&#10084;</span>
+         <span class="small-heart1" style="top: 30%; tight: 70%;">&#10084;</span>
+        
     </div>
 
     <footer>
