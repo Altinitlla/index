@@ -70,23 +70,30 @@
         }
 
         /* Navigation Bar Styles */
-        nav {
-            background-color: black; /* Background color for the navbar */
-            padding: 10px; /* Space inside the navbar */
-            text-align: center; /* Center the links */
+       nav {
+            background-color: black;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Keeps the nav bar on top of everything */
+            text-align: center;
         }
 
         nav ul {
-            list-style-type: none; /* Remove bullets from list */
-            padding: 0; /* Remove padding */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between navigation items */
         }
 
         nav ul li {
-            display: inline; /* Display links in a row */
-            margin: 0 20px; /* Space between links */
+            display: inline;
         }
 
-      nav ul li a {
+        nav ul li a {
             text-decoration: none;
             font-family: 'Libre Baskerville', serif;
             color: white;
@@ -94,11 +101,10 @@
             font-weight: bold;
             transition: color 0.3s;
         }
-        
+
         nav ul li a:hover {
             color: #ff6347; /* Highlight color on hover */
         }
-
         /* Footer Styles */
         footer {
             background-color: black; /* Background color for footer */
