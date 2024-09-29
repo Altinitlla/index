@@ -7,8 +7,7 @@
     <style>
         /* Body Styles */
         body {
-           background: linear-gradient(to bottom, red 30%, black 100%);
-
+            background: linear-gradient(to bottom, red 30%, black 100%);
             font-family: 'Baskerville', serif;
             overflow: hidden; /* Prevent scrollbars */
             margin: 0;
@@ -94,6 +93,35 @@
             0% { transform: translateY(0); }
             100% { transform: translateY(-100%); }
         }
+
+        /* Content container for photos and videos */
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .item {
+            border: 2px solid white;
+            padding: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        img, video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .item {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,28 +135,62 @@
     </nav>
 
     <!-- Moving hearts -->
-  <div class="moving-heart" style="top: 10%; left: 10%;">x</div>
-<div class="moving-heart" style="top: 20%; left: 50%;">x</div>
-<div class="moving-heart" style="top: 30%; left: 80%;">x</div>
-<div class="moving-heart" style="top: 50%; left: 30%;">x</div>
-<div class="moving-heart" style="top: 60%; left: 70%;">x</div>
+    <div class="moving-heart" style="top: 10%; left: 10%;">x</div>
+    <div class="moving-heart" style="top: 20%; left: 50%;">x</div>
+    <div class="moving-heart" style="top: 30%; left: 80%;">x</div>
+    <div class="moving-heart" style="top: 50%; left: 30%;">x</div>
+    <div class="moving-heart" style="top: 60%; left: 70%;">x</div>
 
-<!-- Big random x -->
-<div class="big-heart" style="top: 15%; left: 20%;">x</div>
-<div class="big-heart" style="top: 45%; left: 60%;">x</div>
-<div class="big-heart" style="top: 75%; left: 80%;">x</div>
+    <!-- Big random x -->
+    <div class="big-heart" style="top: 15%; left: 20%;">x</div>
+    <div class="big-heart" style="top: 45%; left: 60%;">x</div>
+    <div class="big-heart" style="top: 75%; left: 80%;">x</div>
 
     <!-- Main Content -->
     <div id="mainContent">
         <h1 style="color: white; font-size: 40px; color:pink;">Welcome to the Erotic Stuff Section</h1>
-        <p style="color: white;">Content goes here...</p>
+
+        <!-- Photos and Videos Content Container -->
+        <div class="content-container">
+
+            <!-- Photo 1 -->
+            <div class="item">
+                <img src="photo1.jpg" alt="Photo 1"> <!-- Replace with your photo -->
+                <p>Photo description goes here.</p>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="item">
+                <img src="photo2.jpg" alt="Photo 2"> <!-- Replace with your photo -->
+                <p>Photo description goes here.</p>
+            </div>
+
+            <!-- Video 1 -->
+            <div class="item">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4"> <!-- Replace with your video -->
+                    Your browser does not support the video tag.
+                </video>
+                <p>Video description goes here.</p>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="item">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4"> <!-- Replace with your video -->
+                    Your browser does not support the video tag.
+                </video>
+                <p>Video description goes here.</p>
+            </div>
+
+        </div>
     </div>
 
     <!-- The Modal -->
     <div id="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Enter Access Code</h2>
+            <h2>Enter 4 Cifer Access Code</h2>
             <input type="text" id="accessCode" placeholder="Enter code here...">
             <button id="submitCode">Submit</button>
             <p id="message"></p>
@@ -167,7 +229,7 @@
         document.getElementById("submitCode").onclick = function() {
             var code = document.getElementById("accessCode").value;
             if (code === "6969") {
-                alert("Access granted!"); // Replace with your content or redirect
+                alert("Access granted!");
                 modal.style.display = "none"; // Close modal
                 document.getElementById("mainContent").style.display = "block"; // Show content
             } else {
@@ -177,5 +239,3 @@
     </script>
 </body>
 </html>
-
-      
