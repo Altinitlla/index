@@ -73,16 +73,17 @@
          text-shadow: 0 0 7px white, 0 0 15px white; /* White glow effect */
        }
 
-        /* Footer Styles */
-        footer {
-            background-color: black; /* Background color for footer */
-            color: white; /* Text color */
-            text-align: center; /* Center align text */
-            padding: 15px; /* Space inside the footer */
-            position: fixed; /* Positioning at the bottom */
-            bottom: 0;
-            width: 100%; /* Full width */
-        }
+      footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it's above other content */
+}
+
         footer p {
     color: white; /* Changes text color */
     font-size: 19px; /* Changes font size */
