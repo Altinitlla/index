@@ -71,7 +71,7 @@
             color: white; /* Text color */
             text-align: center; /* Center align text */
             padding: 10px; /* Space inside the footer */
-            position: absolute; /* Positioning at the bottom */
+            position: fixed; /* Positioning at the bottom */
             bottom: 0;
             width: 100%; /* Full width */
         }
@@ -84,7 +84,9 @@
         /* Moving hearts styles */
         .moving-heart, .big-heart {
             position: absolute;
-            color:pink;
+            color: #D5006D;
+            border-size: 2px;
+            border-color: white;
             font-size: 24px; /* Adjust size of hearts */
             animation: move 5s linear infinite; /* Example animation */
         }
@@ -106,7 +108,7 @@
         .item {
             border: 2px solid white;
             padding: 10px;
-            width: 400px;
+            max-width: 400px;
             text-align: center;
         }
 
