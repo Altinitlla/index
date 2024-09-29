@@ -68,7 +68,7 @@
             font-size: 40px; 
             text-align: centre;
             color:pink; 
-            border:1px solid ;
+            border: 5px solid white; /* Correct way to define border size and color */
             border-color:solid white;
         }
         /* Footer Styles */
@@ -87,15 +87,15 @@
             display: none; /* Initially hidden */
         }
 
-        /* Moving hearts styles */
-        .moving-heart, .big-heart {
-            position: absolute;
-            color: #D5006D;
-            border-size: 2px;
-            border-color: white;
-            font-size: 24px; /* Adjust size of hearts */
-            animation: move 5s linear infinite; /* Example animation */
-        }
+      
+/* Moving hearts styles */
+.moving-heart, .big-heart {
+    position: absolute;
+    color: #D5006D; /* Darker pink */
+    border: 2px solid white; /* Correct way to define border size and color */
+    font-size: 24px; /* Adjust size of hearts */
+    animation: move 5s linear infinite; /* Example animation */
+}
 
         @keyframes move {
             0% { transform: translateY(0); }
