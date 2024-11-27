@@ -127,7 +127,70 @@
             position: relative; /* Keep footer at the bottom */
             width: 100%; /* Full width */
         }
-    </style>
+
+    /* General styles remain unchanged */
+
+    /* Responsive styles for smaller screens */
+    @media (max-width: 768px) {
+        .video-header {
+            max-height: 300px; /* Adjust the height for smaller screens */
+        }
+
+        .video-header video {
+            width: 100%; /* Ensure the video takes the full width of the screen */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        nav ul {
+            flex-direction: column; /* Stack the navigation items */
+            gap: 20px; /* Adjust spacing for better readability */
+        }
+
+        nav ul li a {
+            font-size: 16px; /* Adjust font size for better visibility */
+        }
+
+        .photo-frame {
+            width: 200px; /* Reduce the size of photo frames */
+            height: 200px;
+            margin: 20px auto; /* Center frames and reduce margin */
+        }
+
+        img {
+            object-fit: cover; /* Ensure the images remain well-fitted */
+        }
+
+        h1 {
+            font-size: 30px; /* Adjust heading size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .video-header {
+            max-height: 200px; /* Further reduce video height for very small screens */
+        }
+
+        .photo-frame {
+            width: 150px; /* Make photo frames smaller */
+            height: 150px;
+        }
+
+        nav ul li a {
+            font-size: 14px; /* Further reduce font size for nav links */
+        }
+
+        h1 {
+            font-size: 24px; /* Further adjust heading size */
+        }
+    }
+</style>
+
+
+
+
+
+
+ 
 </head>
 <body>
     <!-- Background Hearts -->
@@ -149,7 +212,7 @@
 
     <!-- Video Header -->
     <div class="video-header">
-        <video autoplay muted loop>
+        <video autoplay loop>
             <source src="adreatic.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
